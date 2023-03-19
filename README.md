@@ -7,7 +7,7 @@ Kubernetes in Docker with Terraform
 
 🎯 About
 
-This project is a simple example of how to use Terraform to create a Kubernetes cluster in Docker using Kind.
+OpenMetadata Unlock the value of data assets with an end-to-end metadata platform that includes data discovery, governance, data quality, observability, and people collaborationd.
 🚀 Technologies
 
 The following tools were used in this project:
