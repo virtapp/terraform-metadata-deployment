@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: charts/infra/postgresql-ha
-    repoURL: https://github.com/virtapp/terraform-local-deployment.git
+    repoURL: https://github.com/virtapp/terraform-metadata-deployment.git
     targetRevision: HEAD
   syncPolicy:
     automated: {}
@@ -33,46 +33,10 @@ spec:
       - name: auth.rootPassword
         value: "test2test"
     path: charts/infra/mariadb-galera
-    repoURL: https://github.com/virtapp/terraform-local-deployment.git
+    repoURL: https://github.com/virtapp/terraform-metadata-deployment.git
     targetRevision: HEAD
   syncPolicy:
     automated: {}
 
----
-
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: nexus
-  namespace: argocd
-spec:
-  destination:
-    namespace: infra
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: charts/infra/nexus
-    repoURL: https://github.com/virtapp/terraform-local-deployment.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated: {}
-
----
 
 
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: sonarqube
-  namespace: argocd
-spec:
-  destination:
-    namespace: infra
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: charts/infra/sonarqube
-    repoURL: https://github.com/virtapp/terraform-local-deployment.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated: {}
