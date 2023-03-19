@@ -37,6 +37,7 @@ helm repo add rancher-latest https://releases.rancher.com/server-charts/latest |
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts || true
 helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts || true
 helm repo add kedacore https://kedacore.github.io/charts || true
+helm repo add open-metadata https://helm.open-metadata.org || true
 helm repo update && sleep 5
 helm fetch rancher-latest/rancher --version=v2.7.0 || true
 kubectl create namespace infra || true
