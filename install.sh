@@ -59,7 +59,8 @@ done  2>/dev/null
              echo         "---  LOAD-ARGO-APPLICATIONS  ---"
              echo      "----- ............................. -----"      
              
-sleep 5 &&           
+sleep 5 && 
+source config/metadata-secret.sh
 kubectl apply -f ./${path_folder}/app-httpd.yaml
 kubectl apply -f ./${path_folder}/app-infra.yaml
                printf "\nWaiting for application will be ready... \n"
