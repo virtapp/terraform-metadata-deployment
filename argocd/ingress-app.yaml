@@ -45,7 +45,7 @@ spec:
         pathType: Prefix
         
         
-   - host: app-portal.virtapp.io
+  - host: app-portal.virtapp.io
     http:
       paths:
       - backend:
